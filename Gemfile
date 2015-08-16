@@ -30,12 +30,8 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-end
-
-group :test do
-  gem 'minitest-reporters'
-  gem 'mini_backtrace'
-  gem 'guard-minitest'
+  gem 'guard-rails'
+  gem 'rspec-rails'
 end
 
 group :production do
