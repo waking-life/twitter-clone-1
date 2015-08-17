@@ -33,6 +33,8 @@ group :development, :test do
   gem 'spring'
   gem 'guard-rails'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do
