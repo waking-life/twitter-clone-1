@@ -22,6 +22,19 @@ RSpec.feature "UserLogins", type: :feature do
       click_button "Log in"
 
       expect(current_path).to eq(user_path(user))
+      expect(page).to have_content("Bob")
+    end
+
+    it "can log out after login" do
+      visit login_path
+      fill_in "Email", with: "bob@email.com"
+      fill_in "Password", with: "password"
+      click_button "Log in"
+
+      click_on "Account"
+      click_on "Log out"
+
+      expect(current_path).to eq(root_path)
     end
   end
 end
